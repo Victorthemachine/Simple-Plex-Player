@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+  <playlist>
+    {{#MediaContainer}}
+    {{#Metadata}}
+    <track>
+      {{#Media}}
+      {{#Part}}
+      <mediaUrl>{{{key}}}</mediaUrl>
+      {{/Part}}
+      {{/Media}}
+      <title><![CDATA[{{title}}]]></title>
+      <subtitle><![CDATA[{{parentTitle}}]]></subtitle>
+      <description><![CDATA[{{summary}}]]></description>
+      <imageURL>{{thumb}}</imageURL>
+    </track>
+    {{/Metadata}}
+    {{/MediaContainer}}
+  </playlist>
+</document>

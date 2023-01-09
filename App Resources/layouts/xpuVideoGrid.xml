@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <stackTemplate>
+    <banner>
+    <header>
+       <title>Music Videos</title>
+    </header>
+  </banner>
+    <collectionList>
+      <grid>
+        {{#MediaContainer}}
+        <section>
+          {{#Metadata}}
+          <lockup presentation="playVideo" data='[{"title": "{{title}}", "description": "", {{#Media}}{{#Part}}"mediaURL": "{{{key}}}"{{/Part}}{{/Media}}, "subtitle": "{{parentTitle}}", "band": "{{grandparentTitle}}", "img": "{{{thumb}}}"},]' docID="">
+              <img src="{{{thumb}}}" width="544" height="308" />
+              <title>{{title}}</title>
+          </lockup>
+            {{/Metadata}}
+        </section>
+        {{/MediaContainer}}
+      </grid>
+    </collectionList>
+</stackTemplate>
+</document>

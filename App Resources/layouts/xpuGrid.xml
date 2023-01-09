@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <stackTemplate>
+    {{#MediaContainer}}
+    <banner>
+      <header>
+      </header>
+    </banner>
+    <collectionList>
+      <grid>
+        <section>
+          {{#Metadata}}
+          <lockup template="xpudTracks.xml" data="{{key}}" presentation="push" key="" docID="">
+            <img src="{{{thumb}}}" width="308" height="308" />
+            <title>{{title}}</title>
+          </lockup>
+          {{/Metadata}}
+        </section>
+        {{/MediaContainer}}
+      </grid>
+    </collectionList>
+</stackTemplate>
+</document>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <productBundleTemplate>
+        <banner>
+          {{#MediaContainer}}
+            <stack>
+                <title>{{title2}}</title>
+                <description handlesOverflow ="true" allowsZooming="true" moreLabel="more" presentation="modal" template="xDescription.xml" data="{{fullURL}}"><![CDATA[{{{summary}}}]]></description>
+                <row>
+                    <buttonLockup presentation="playShuffledAudio" data="/search?type=10&amp;artist.id={0}&amp;group=title&amp;limit=100&amp;ratingCount%3E=1&amp;sort=ratingCount:desc" artistKey="{{key}}" docID="5">
+                      <badge src="resource://button-rate"/>
+                      <title>Play popular</title>
+                    </buttonLockup>
+                    <buttonLockup presentation="playShuffledAudio" data="/search?type=10&amp;artist.id={0}&amp;group=title&amp;sort=title:desc" artistKey="{{key}}" docID="5">
+                      <badge src="resource://button-shuffle"/>
+                      <title>Shuffle Albums</title>
+                    </buttonLockup>
+                </row>
+            </stack>
+            <heroImg src="{{{thumb}}}" />
+        </banner>
+        <shelf>
+            <header>
+                <title>Albums</title>
+            </header>
+            <section>
+              {{#Metadata}}
+                <lockup template="xpudTracks.xml" data="{{key}}" presentation="push" key="" docID="">
+                    <img src="{{{thumb}}}" width="226" height="226" />
+                    <title>{{title}}</title>
+                </lockup>
+                {{/Metadata}}
+            </section>
+        </shelf>
+        {{/MediaContainer}}
+    </productBundleTemplate>
+</document>

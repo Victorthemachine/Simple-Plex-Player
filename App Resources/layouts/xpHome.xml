@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  {{#MediaContainer}}
+   <paradeTemplate>
+      <list>
+         <header>
+            <title>{{title1}}</title>
+         </header>
+         <section>
+            {{#Directory}}
+            <listItemLockup template="xpuMenuBar.xml" data="/library/sections/" presentation="push" key="{{key}}" type="{{type}}" docID="">
+            <title>{{title}}</title>
+            </listItemLockup>
+            {{/Directory}}
+         </section>
+         <relatedContent>
+            <imgDeck>
+               <img src="resource://home1"/>
+               <img src="resource://home2"/>
+               <img src="resource://home3"/>
+               <img src="resource://home4"/>
+               <img src="resource://home5"/>
+               <img src="resource://home6"/>
+               <img src="resource://home7"/>
+               <img src="resource://home8"/>
+            </imgDeck>
+         </relatedContent>
+      </list>
+   </paradeTemplate>
+   {{/MediaContainer}}
+  </document>

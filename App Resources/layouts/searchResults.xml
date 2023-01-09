@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <searchTemplate>
+        <searchField/>
+        <collectionList>
+        <grid>
+         {{#MediaContainer}}
+         <header>
+                <title>{{title1}} - {{title2}}</title>
+            </header>
+          {{/MediaContainer}}
+            <section id="results">
+              {{#MediaContainer}}
+              {{#Metadata}}
+              <lockup template="" key="" type="{{type}}"
+                data="{{{key}}}" docID="7">
+                  <img src="{{{thumb}}}" width="308" height="308" />
+                  <title>{{title}}</title>
+              </lockup>
+              {{/Metadata}}
+              {{/MediaContainer}}
+            </section>
+        </grid>
+
+        </collectionList>
+    </searchTemplate>
+</document>

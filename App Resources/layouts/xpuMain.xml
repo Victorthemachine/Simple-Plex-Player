@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <stackTemplate>
+        <banner>
+        </banner>
+        <collectionList>
+            <shelf>
+                <header>
+                   {{#Albums}}
+                   <title>{{librarySectionTitle}} - Recently Added</title>
+                   {{/Albums}}
+                </header>
+                <section>
+                    {{#Albums}}
+                    {{#Metadata}}
+                    <lockup presentation="push" data="{{key}}" template="xpudTracks.xml">
+                        <img src="{{{thumb}}}" width="308" height="308" />
+                        <title>{{title}}</title>
+                    </lockup>
+                    {{/Metadata}}
+                    {{/Albums}}
+                </section>
+            </shelf>
+            <shelf>
+                <header>
+                   <title>Internet Radio</title>
+                </header>
+                <section>
+                   <lockup presentation="playAudio" data='[{"title": "Radio KISS", "mediaURL": "http://icecast1.play.cz/kiss128.mp3", "subtitle": "LIVE", "img": "resource://kiss"},]'>
+                       <img src="resource://kiss" width="248" height="248" />
+                       <title>Radio KISS</title>
+                   </lockup>
+                   <lockup presentation="playAudio" data='[{"title": "Radio Evropa2", "mediaURL": "http://ice.actve.net/fm-evropa2-128", "subtitle": "LIVE", "img": "resource://evropa2"},]'>
+                       <img src="resource://evropa2" width="248" height="248" />
+                       <title>Radio Evropa2</title>
+                   </lockup>
+                   <lockup presentation="playAudio" data='[{"title": "Radio Impuls", "mediaURL": "http://icecast5.play.cz/impuls64.mp3", "subtitle": "LIVE", "img": "resource://impuls"},]'>
+                       <img src="resource://impuls" width="248" height="248" />
+                       <title>Radio Impuls</title>
+                   </lockup>
+                   <lockup presentation="playAudio" data='[{"title": "Radio Bonton", "mediaURL": "http://ice.actve.net/fm-bonton-128", "subtitle": "LIVE", "img": "resource://bonton"},]'>
+                       <img src="resource://bonton" width="248" height="248" />
+                       <title>Radio Bonton</title>
+                   </lockup>
+                   <lockup presentation="playAudio" data='[{"title": "Radio ČRo Jazz", "mediaURL": "http://icecast2.play.cz/crojazz64.mp3", "subtitle": "LIVE", "img": "resource://jazz"},]'>
+                       <img src="resource://jazz" width="248" height="248" />
+                       <title>Radio ČRo Jazz</title>
+                   </lockup>
+                    <lockup presentation="playAudio" data='[{"title": "Radio Beat", "mediaURL": "http://icecast5.play.cz/radiobeat128.mp3", "subtitle": "LIVE", "img": "resource://beat"},]'>
+                        <img src="resource://beat" width="248" height="248" />
+                        <title>Radio Beat</title>
+                    </lockup>
+                    <lockup presentation="playAudio" data='[{"title": "Radio Country", "mediaURL": "http://icecast2.play.cz:8000/country64.mp3", "subtitle": "LIVE", "img": "resource://country"},]'>
+                        <img src="resource://country" width="248" height="248" />
+                        <title>Radio Country</title>
+                    </lockup>
+                </section>
+            </shelf>
+            <shelf>
+                <header>
+                   <title>Music Videos</title>
+                </header>
+                <section>
+                    {{#MediaContainer}}
+                    {{#Videos}}
+                    {{#Metadata}}
+                    <lockup presentation="playVideo" data='[{"title": "{{title}}", "description": "", {{#Media}}{{#Part}}"mediaURL": "{{{key}}}"{{/Part}}{{/Media}}, "subtitle": "{{parentTitle}}", "band": "{{grandparentTitle}}", "img": "{{{thumb}}}"},]' docID="">
+                        <img src="{{{thumb}}}" width="544" height="308" />
+                        <title>{{title}}</title>
+                    </lockup>
+                    {{/Metadata}}
+                    {{/Videos}}
+                    {{/MediaContainer}}
+                </section>
+            </shelf>
+        </collectionList>
+    </stackTemplate>
+</document>

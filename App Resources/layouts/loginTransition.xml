@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<document>
+  <alertTemplate>
+    <title>{{title}}</title>
+    <description>{{description}}</description>
+    <button template="{{template}}" presentation="{{presentation}}" data="{{dataToRelay}}">
+      <text>{{buttonTitle}}</text>
+    </button>
+  </alertTemplate>
+</document>

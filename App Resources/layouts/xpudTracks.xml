@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+    <compilationTemplate theme="dark">
+        <list>
+            {{#MediaContainer}}
+            <relatedContent>
+                <itemBanner>
+                    <heroImg src="{{{thumb}}}" />
+                    <row>
+                      <buttonLockup presentation="playAudio" data='[{{#Metadata}}{"title": "{{title}}", "description": "", {{#Media}}{{#Part}}"mediaURL": "{{{key}}}"{{/Part}}{{/Media}}, "subtitle": "{{parentTitle}}", "band": "{{grandparentTitle}}", "img": "{{thumb}}"},{{/Metadata}}]' docID="">
+                          <badge src="resource://button-play"/>
+                          <title>Play</title>
+                      </buttonLockup>
+                      <buttonLockup presentation="playShuffledAudio" data='[{{#Metadata}}{"title": "{{title}}", "description": "", {{#Media}}{{#Part}}"mediaURL": "{{{key}}}"{{/Part}}{{/Media}}, "subtitle": "{{parentTitle}}", "band": "{{grandparentTitle}}", "img": "{{thumb}}"},{{/Metadata}}]' docID="">
+                          <badge src="resource://button-shuffle"/>
+                          <title>Shuffle</title>
+                      </buttonLockup>
+                    </row>
+                </itemBanner>
+            </relatedContent>
+            <header>
+                <title>{{title2}}</title>
+                <subtitle>{{title1}}</subtitle>
+                <row>
+                    <text>{{size}} songs</text>
+                    <text>{{parentYear}}</text>
+                </row>
+            </header>
+            <section>
+              {{#Metadata}}
+                <listItemLockup presentation="playAudio" data='[{"title": "{{title}}", "description": "", {{#Media}}{{#Part}}"mediaURL": "{{{key}}}"{{/Part}}{{/Media}}, "subtitle": "{{parentTitle}}", "band": "{{grandparentTitle}}", "img": "{{thumb}}"},]' docID="">
+                    <ordinal minLength="2">{{index}}</ordinal>
+                    <title>{{title}}</title>
+                    <decorationLabel>{{duration}}</decorationLabel>
+                </listItemLockup>
+              {{/Metadata}}
+            </section>
+            {{/MediaContainer}}
+        </list>
+    </compilationTemplate>
+</document>

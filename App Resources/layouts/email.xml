@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <formTemplate>
+      <banner>
+        <title>Login to your Plex account</title>
+      </banner>
+        <textField keyboardType="emailAdress">Email or username</textField>
+      <footer>
+        <button template="password.xml" data="" presentation="logPush" action="getText" key="" docID="">
+          <text>Next</text>
+        </button>
+      </footer>
+  </formTemplate>
+</document>

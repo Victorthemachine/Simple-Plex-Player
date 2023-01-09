@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <menuBarTemplate>
+    <menuBar>
+      <menuItem template="xpuMain.xml" data="" presentation="menuBar" key="" docID="">
+        <title>Home</title>
+      </menuItem>
+      <menuItem template="xpuGrid.xml" data="" presentation="menuBar" key="" docID="">
+        <title>Albums</title>
+      </menuItem>
+      <menuItem template="xpuArtists.xml" data="" presentation="menuBar" key="" docID="">
+        <title>Artists</title>
+      </menuItem>
+      <menuItem template="search.xml" data="" presentation="menuBar" key="" docID="">
+        <title>&#x1F50E;</title>
+      </menuItem>
+      <nowPlayingMenuItem template="" data="" presentation="menuBar" key="" docID="0">
+       <title>Playing..</title>
+      </nowPlayingMenuItem>
+    </menuBar>
+  </menuBarTemplate>
+</document>
+

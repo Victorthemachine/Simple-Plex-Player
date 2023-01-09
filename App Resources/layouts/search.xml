@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document>
+  <listTemplate>
+       <list>
+          <header>
+             <title>Search..</title>
+          </header>
+          <section>
+             <listItemLockup template="searchResults.xml" data="search?type=8" presentation="push" key="" action="" docID="4">
+                <title>Search Artists...</title>
+             </listItemLockup>
+             <listItemLockup template="searchResults.xml" data="search?type=9" presentation="push" key="" action="" docID="4">
+                <title>Search Albums...</title>
+             </listItemLockup>
+             <listItemLockup template="searchResults.xml" data="search?type=10" presentation="push" key="" action="" docID="4">
+                <title>Search Tracks...</title>
+             </listItemLockup>
+          </section>
+       </list>
+    </listTemplate>
+</document>
